@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 import { Class } from '@agape/types';
 import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 
@@ -60,7 +61,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  */
 export function Example(value: any): (target: object, name?: string, propertyDescriptor?: TypedPropertyDescriptor<any> | number) => void  {
 
-  function Example(target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) {
+  function Example(target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) {
     const descriptor = index !== undefined && typeof index === "number"
       ? MetadataDescriptor.for(target, name, index)
       : MetadataDescriptor.for(target, name);

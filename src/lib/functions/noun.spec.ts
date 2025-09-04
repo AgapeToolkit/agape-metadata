@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Noun } from '../decorators/noun.decorator'
 import { noun } from './noun';
 

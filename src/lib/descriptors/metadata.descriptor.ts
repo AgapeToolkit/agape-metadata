@@ -22,7 +22,7 @@ export class MetadataDescriptor {
 
   description?: string;
 
-  example?: any
+  example?: unknown;
 
   static for(target: Class | object, property?: string, index?: number): MetadataDescriptor {
     const prototype = typeof target === 'function' ? target.prototype : target;

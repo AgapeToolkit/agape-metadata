@@ -22,6 +22,7 @@ describe('MetadataDescriptor', () => {
     d.tokens = 'tokens';
     d.sensitive = true;
     d.description = 'Description';
+    d.example = 'example';
 
     expect(d.label).toEqual('Label');
     expect(d.labels).toEqual('Labels');
@@ -30,6 +31,7 @@ describe('MetadataDescriptor', () => {
     expect(d.token).toEqual('token');
     expect(d.tokens).toEqual('tokens');
     expect(d.sensitive).toEqual(true);
+    expect(d.example).toEqual('example');
     expect(d.description).toEqual('Description');
   })
 

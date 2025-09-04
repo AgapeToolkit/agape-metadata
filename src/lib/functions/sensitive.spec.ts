@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Sensitive } from '../decorators/sensitive.decorator'
 import { sensitive } from './sensitive';
 

@@ -57,7 +57,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  */
 export function Description(description: string) {
 
-  function Description(target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) {
+  function Description(target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) {
 
     const descriptor = index !== undefined && typeof index === "number"
       ? MetadataDescriptor.for(target, name, index)

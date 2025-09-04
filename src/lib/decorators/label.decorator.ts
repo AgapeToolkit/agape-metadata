@@ -55,10 +55,10 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * @decoratorKind Metadata
  * @decoratorPropertyType any
  */
-export function Label(label: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<Function> | number) => void
+export function Label(label: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) => void
 export function Label(...args: string[]) {
 
-  function Label(target: object | Class, name?: string, index?: TypedPropertyDescriptor<Function> | number) {
+  function Label(target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) {
 
     const descriptor = index !== undefined && typeof index === "number"
       ? MetadataDescriptor.for(target, name, index)

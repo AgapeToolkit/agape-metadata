@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 import { Description } from './description.decorator';
 
@@ -28,6 +30,7 @@ describe('Description', () => {
 
     class Foo {
       @Description('This is a method')
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       foo() {
 
       }

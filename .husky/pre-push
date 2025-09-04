@@ -1,2 +1,2 @@
-npx nx lint types
-npx nx test types --no-watch --ci
+npx nx lint metadata
+npx nx test metadata --no-watch --ci

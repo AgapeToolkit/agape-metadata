@@ -57,10 +57,10 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * @decoratorKind Metadata
  * @decoratorPropertyType any
  */
-export function Token(token: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<Function> | number) => void
+export function Token(token: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) => void
 export function Token(...args: string[]) {
 
-  function Token(target: object | Class, name?: string, index?: TypedPropertyDescriptor<Function> | number) {
+  function Token(target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) {
 
     const descriptor = index !== undefined && typeof index === "number"
       ? MetadataDescriptor.for(target, name, index)
