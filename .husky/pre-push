@@ -1,0 +1,2 @@
+npx nx lint metadata
+npx nx test metadata --no-watch --ci
