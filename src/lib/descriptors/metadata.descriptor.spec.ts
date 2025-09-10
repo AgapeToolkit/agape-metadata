@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-function */
+
 import { MetadataDescriptor } from './metadata.descriptor';
 
 describe('MetadataDescriptor', () => {
@@ -41,7 +44,10 @@ describe('MetadataDescriptor', () => {
       d = MetadataDescriptor.for(Foo)
 
       const e = MetadataDescriptor.for(Foo);
-      expect(d).toBe(e)
+      expect(d).toBe(e);
+
+      const f = Reflect.getMetadata('agape:metadata', Foo.prototype);
+      expect(f).toBe(e);
     })
     it('should get the same descriptor for a class as it\'s prototype', () => {
       class Foo { }
@@ -49,6 +55,9 @@ describe('MetadataDescriptor', () => {
 
       const e = MetadataDescriptor.for(Foo.prototype);
       expect(d).toBe(e)
+
+      const f = Reflect.getMetadata('agape:metadata', Foo.prototype);
+      expect(f).toBe(e);
     })
     it('should get the descriptor for a property', () => {
       class Foo {
@@ -58,15 +67,32 @@ describe('MetadataDescriptor', () => {
 
       const e = MetadataDescriptor.for(Foo, 'foo');
       expect(d).toBe(e)
+
+      const f = Reflect.getMetadata('agape:metadata', Foo.prototype, 'foo');
+      expect(f).toBe(e);
     })
     it('should get the descriptor for a parameter', () => {
       class Foo {
-        foo: string;
+
+        foo(param1: string, param2: string) {
+
+        }
       }
       d = MetadataDescriptor.for(Foo.prototype, 'foo', 0)
 
       const e = MetadataDescriptor.for(Foo, 'foo', 0);
       expect(d).toBe(e)
+
+      const f = Reflect.getMetadata('agape:metadata', Foo.prototype, 'foo:0');
+      expect(f).toBe(e);
+
+      const g = MetadataDescriptor.for(Foo, 'foo', 1);
+      expect(g).toBeInstanceOf(MetadataDescriptor);
+
+      const h = Reflect.getMetadata('agape:metadata', Foo.prototype, 'foo:1');
+      expect(h).toBe(g);
+
+      expect(h).not.toBe(e);
     })
   })
 })
