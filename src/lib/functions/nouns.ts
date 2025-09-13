@@ -4,7 +4,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 /**
  * Retrieves the nouns metadata (plural form) associated with a class, property, or method parameter.
  *
- * This function is used to fetch the `nouns` value stored via metadata for the given target.
+ * This function is used to fetch the `<property>nouns` value stored via metadata for the given target.
  * It supports metadata attached at the class level, property level, or parameter level depending
  * on which arguments are provided.
  *
@@ -13,19 +13,19 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * ### Class Level Nouns
  *
  * ```ts
- * const nouns = nouns(MyClass);
+ * const metadata = nouns(MyClass);
  * ```
  *
  * ### Property Level Nouns
  *
  * ```ts
- * const nouns = nouns(MyClass, 'title');
+ * const metadata = nouns(MyClass, 'title');
  * ```
  *
  * ### Parameter Level Nouns
  *
  * ```ts
- * const nouns = nouns(MyClass, 'setTitle', 0);
+ * const metadata = nouns(MyClass, 'setTitle', 0);
  * ```
  *
  * @param target - The target class constructor to retrieve metadata from.

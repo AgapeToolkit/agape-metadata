@@ -4,7 +4,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 /**
  * Retrieves the label metadata associated with a class, property, or method parameter.
  *
- * This function is used to fetch the `label` value stored via metadata for the given target.
+ * This function is used to fetch the `<property>label` value stored via metadata for the given target.
  * It supports metadata attached at the class level, property level, or parameter level depending
  * on which arguments are provided.
  *
@@ -13,19 +13,19 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * ### Class Level Label
  *
  * ```ts
- * const label = label(MyClass);
+ * const metadata = label(MyClass);
  * ```
  *
  * ### Property Level Label
  *
  * ```ts
- * const label = label(MyClass, 'title');
+ * const metadata = label(MyClass, 'title');
  * ```
  *
  * ### Parameter Level Label
  *
  * ```ts
- * const label = label(MyClass, 'setTitle', 0);
+ * const metadata = label(MyClass, 'setTitle', 0);
  * ```
  *
  * @param target - The target class constructor to retrieve metadata from.

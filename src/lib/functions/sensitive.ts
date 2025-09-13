@@ -4,7 +4,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 /**
  * Retrieves the sensitive metadata associated with a class, property, or method parameter.
  *
- * This function is used to fetch the `sensitive` value stored via metadata for the given target.
+ * This function is used to fetch the `<property>sensitive` value stored via metadata for the given target.
  * It supports metadata attached at the class level, property level, or parameter level depending
  * on which arguments are provided.
  *
@@ -13,19 +13,19 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * ### Class Level Sensitive
  *
  * ```ts
- * const sensitive = sensitive(MyClass);
+ * const metadata = sensitive(MyClass);
  * ```
  *
  * ### Property Level Sensitive
  *
  * ```ts
- * const sensitive = sensitive(MyClass, 'password');
+ * const metadata = sensitive(MyClass, 'password');
  * ```
  *
  * ### Parameter Level Sensitive
  *
  * ```ts
- * const sensitive = sensitive(MyClass, 'setPassword', 0);
+ * const metadata = sensitive(MyClass, 'setPassword', 0);
  * ```
  *
  * @param target - The target class constructor to retrieve metadata from.

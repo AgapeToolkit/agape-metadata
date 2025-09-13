@@ -13,19 +13,19 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * ### Class Level Labels
  *
  * ```ts
- * const labels = labels(MyClass);
+ * const metadata = labels(MyClass);
  * ```
  *
  * ### Property Level Labels
  *
  * ```ts
- * const labels = labels(MyClass, 'title');
+ * const metadata = labels(MyClass, 'title');
  * ```
  *
  * ### Parameter Level Labels
  *
  * ```ts
- * const labels = labels(MyClass, 'setTitle', 0);
+ * const metadata = labels(MyClass, 'setTitle', 0);
  * ```
  *
  * @param target - The target class constructor to retrieve metadata from.

@@ -13,19 +13,19 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * ### Class Level Tokens
  *
  * ```ts
- * const tokens = tokens(MyClass);
+ * const metadata = tokens(MyClass);
  * ```
  *
  * ### Property Level Tokens
  *
  * ```ts
- * const tokens = tokens(MyClass, 'title');
+ * const metadata = tokens(MyClass, 'title');
  * ```
  *
  * ### Parameter Level Tokens
  *
  * ```ts
- * const tokens = tokens(MyClass, 'setTitle', 0);
+ * const metadata = tokens(MyClass, 'setTitle', 0);
  * ```
  *
  * @param target - The target class constructor to retrieve metadata from.

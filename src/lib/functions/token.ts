@@ -4,7 +4,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 /**
  * Retrieves the token metadata associated with a class, property, or method parameter.
  *
- * This function is used to fetch the `token` value stored via metadata for the given target.
+ * This function is used to fetch the `<property>token` value stored via metadata for the given target.
  * It supports metadata attached at the class level, property level, or parameter level depending
  * on which arguments are provided.
  *
@@ -13,19 +13,19 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * ### Class Level Token
  *
  * ```ts
- * const token = token(MyClass);
+ * const metadata = token(MyClass);
  * ```
  *
  * ### Property Level Token
  *
  * ```ts
- * const token = token(MyClass, 'title');
+ * const metadata = token(MyClass, 'title');
  * ```
  *
  * ### Parameter Level Token
  *
  * ```ts
- * const token = token(MyClass, 'setTitle', 0);
+ * const metadata = token(MyClass, 'setTitle', 0);
  * ```
  *
  * @param target - The target class constructor to retrieve metadata from.

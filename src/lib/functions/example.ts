@@ -14,19 +14,19 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * ### Class Level Example
  *
  * ```ts
- * const example = example(MyClass);
+ * const metadata = example(MyClass);
  * ```
  *
  * ### Property Level Example
  *
  * ```ts
- * const example = example(MyClass, 'title');
+ * const metadata = example(MyClass, 'title');
  * ```
  *
  * ### Parameter Level Example
  *
  * ```ts
- * const example = example(MyClass, 'setTitle', 0);
+ * const metadata = example(MyClass, 'setTitle', 0);
  * ```
  *
  * @param target - The target class constructor to retrieve metadata from.
