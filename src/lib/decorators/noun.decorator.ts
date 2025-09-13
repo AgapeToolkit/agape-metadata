@@ -54,10 +54,10 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * @decoratorKind Metadata
  * @decoratorPropertyType any
  */
-export function Noun(noun: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) => void
-export function Noun(...args: string[]) {
+export function Noun(noun: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) => void
+export function Noun(...args: any[]) {
 
-  function Noun(target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) {
+  function Noun(target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) {
 
     const descriptor = index !== undefined && typeof index === "number"
       ? MetadataDescriptor.for(target, name, index)
