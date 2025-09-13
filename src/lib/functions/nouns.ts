@@ -2,7 +2,7 @@ import { Class } from '@agape/types';
 import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 
 /**
- * Retrieves the nouns metadata (plural form) associated with a class, property, or method parameter.
+ * Retrieves the noun metadata (plural form) associated with a class, property, or method parameter.
  *
  * This function is used to fetch the `<property>nouns` value stored via metadata for the given target.
  * It supports metadata attached at the class level, property level, or parameter level depending
