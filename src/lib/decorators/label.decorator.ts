@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Class } from '@agape/types';
 import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 
@@ -55,10 +56,10 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * @decoratorKind Metadata
  * @decoratorPropertyType any
  */
-export function Label(label: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) => void
-export function Label(...args: string[]) {
+export function Label(label: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) => void
+export function Label(...args: any[]) {
 
-  function Label(target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) {
+  function Label(target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) {
 
     const descriptor = index !== undefined && typeof index === "number"
       ? MetadataDescriptor.for(target, name, index)

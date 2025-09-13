@@ -14,7 +14,7 @@ describe('nouns', () => {
   it('should work with properties', () => {
     class Foo {
       @Noun('foo', 'foos')
-      foo: string;
+      foo!: string;
     }
 
     expect(nouns(Foo, 'foo')).toBe('foos')

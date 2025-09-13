@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Class } from '@agape/types';
 import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 
@@ -57,10 +58,10 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * @decoratorKind Metadata
  * @decoratorPropertyType any
  */
-export function Token(token: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) => void
-export function Token(...args: string[]) {
+export function Token(token: string | undefined, plural?: string): (target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) => void
+export function Token(...args: any[]) {
 
-  function Token(target: object | Class, name?: string, index?: TypedPropertyDescriptor<unknown> | number) {
+  function Token(target: object | Class, name?: string, index?: TypedPropertyDescriptor<any> | number) {
 
     const descriptor = index !== undefined && typeof index === "number"
       ? MetadataDescriptor.for(target, name, index)

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Class } from '@agape/types';
 import 'reflect-metadata';
 
@@ -22,11 +23,11 @@ export class MetadataDescriptor {
 
   description?: string;
 
-  example?: unknown;
+  example?: any;
 
   static for(target: Class | object, property?: string, index?: number): MetadataDescriptor {
     const prototype = typeof target === 'function' ? target.prototype : target;
-    const token = index === undefined ? property : `${property}:${index}`;
+    const token = index !== undefined ? `${property}:${index}` : property || '';
 
     let descriptor = Reflect.getMetadata('agape:metadata', prototype, token);
     if (descriptor) return descriptor;
@@ -35,5 +36,11 @@ export class MetadataDescriptor {
     Reflect.defineMetadata('agape:metadata', descriptor, prototype, token);
 
     return descriptor;
+  }
+
+  static get(target: Class | object, property?: string, index?: number): MetadataDescriptor | undefined {
+    const prototype = typeof target === 'function' ? target.prototype : target;
+    const token = index !== undefined ? `${property}:${index}` : property || '';
+    return Reflect.getMetadata('agape:metadata', prototype, token);
   }
 }

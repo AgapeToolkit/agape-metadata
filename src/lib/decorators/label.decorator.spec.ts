@@ -8,7 +8,7 @@ describe('Label', () => {
   it('should decorate a class', () => {
     @Label('Foo')
     class Foo {
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo)
@@ -19,7 +19,7 @@ describe('Label', () => {
 
     class Foo {
       @Label('Foo')
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo, 'foo')
@@ -55,7 +55,7 @@ describe('Label', () => {
   it('should set the plural', () => {
     @Label('Foo', 'Foos')
     class Foo {
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo)

@@ -5,7 +5,7 @@ import { MetadataDescriptor } from './metadata.descriptor';
 
 describe('MetadataDescriptor', () => {
 
-  let d: MetadataDescriptor;
+  let d: MetadataDescriptor | undefined;
 
   beforeEach(() => {
     d = undefined;
@@ -61,7 +61,7 @@ describe('MetadataDescriptor', () => {
     })
     it('should get the descriptor for a property', () => {
       class Foo {
-        foo: string;
+        foo!: string;
       }
       d = MetadataDescriptor.for(Foo.prototype, 'foo')
 
@@ -73,7 +73,6 @@ describe('MetadataDescriptor', () => {
     })
     it('should get the descriptor for a parameter', () => {
       class Foo {
-
         foo(param1: string, param2: string) {
 
         }

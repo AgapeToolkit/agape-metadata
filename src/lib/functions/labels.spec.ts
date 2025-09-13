@@ -14,7 +14,7 @@ describe('labels', () => {
   it('should work with properties', () => {
     class Foo {
       @Label('Foo', 'Foos')
-      foo: string;
+      foo!: string;
     }
 
     expect(labels(Foo, 'foo')).toBe('Foos')
