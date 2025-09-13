@@ -8,8 +8,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * > This decorator sets the `<property>description` property on the associated
  * {@link MetadataDescriptor}.
  *
- * ## Usage
- *
+ * @example
  * ### Class
  * ```ts
  * @Description('Represents a user profile with personal and contact information')
@@ -19,6 +18,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Property
  * ```ts
  * class Profile {
@@ -27,6 +27,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Method
  * ```ts
  * class ProfileService {
@@ -37,6 +38,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Parameter
  * ```ts
  * class ProfileService {
