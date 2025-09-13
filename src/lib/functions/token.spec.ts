@@ -14,7 +14,7 @@ describe('token', () => {
   it('should work with properties', () => {
     class Foo {
       @Token('foo')
-      foo: string;
+      foo!: string;
     }
 
     expect(token(Foo, 'foo')).toBe('foo')

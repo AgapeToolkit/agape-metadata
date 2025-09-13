@@ -8,7 +8,7 @@ describe('Token', () => {
   it('should decorate a class', () => {
     @Token('foo')
     class Foo {
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo)
@@ -19,7 +19,7 @@ describe('Token', () => {
 
     class Foo {
       @Token('foo')
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo, 'foo')
@@ -55,7 +55,7 @@ describe('Token', () => {
   it('should set the plural', () => {
     @Token('foo', 'foos')
     class Foo {
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo)

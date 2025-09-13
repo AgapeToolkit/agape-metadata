@@ -14,7 +14,7 @@ describe('sensitive', () => {
   it('should work with properties', () => {
     class Foo {
       @Sensitive
-      foo: string;
+      foo!: string;
     }
 
     expect(sensitive(Foo, 'foo')).toBe(true);

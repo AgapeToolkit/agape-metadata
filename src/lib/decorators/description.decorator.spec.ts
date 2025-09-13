@@ -8,7 +8,7 @@ describe('Description', () => {
   it('should decorate a class', () => {
     @Description('This is a class')
     class Foo {
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo)
@@ -19,7 +19,7 @@ describe('Description', () => {
 
     class Foo {
       @Description('This is a property')
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo, 'foo')
