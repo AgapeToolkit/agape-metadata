@@ -36,4 +36,10 @@ export class MetadataDescriptor {
 
     return descriptor;
   }
+
+  static get(target: Class | object, property?: string, index?: number): MetadataDescriptor | undefined {
+    const prototype = typeof target === 'function' ? target.prototype : target;
+    const token = index === undefined ? property : `${property}:${index}`;
+    return Reflect.getMetadata('agape:metadata', prototype, token);
+  }
 }
