@@ -4,7 +4,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 /**
  * Retrieves the description metadata associated with a class, property, or method parameter.
  *
- * This function is used to fetch the `description` value stored via metadata for the given target.
+ * This function is used to fetch the `<property>description` value stored via metadata for the given target.
  * It supports metadata attached at the class level, property level, or parameter level depending
  * on which arguments are provided.
  *

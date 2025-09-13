@@ -1,6 +1,38 @@
 import { Class } from '@agape/types';
 import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 
-export function noun(target: Class, property?: string, index?: number) {
-  return MetadataDescriptor.for(target, property, index).noun;
+/**
+ * Retrieves the noun metadata associated with a class, property, or method parameter.
+ *
+ * This function is used to fetch the `noun` value stored via metadata for the given target.
+ * It supports metadata attached at the class level, property level, or parameter level depending
+ * on which arguments are provided.
+ *
+ * ## Usage
+ *
+ * ### Class Level Noun
+ *
+ * ```ts
+ * const noun = noun(MyClass);
+ * ```
+ *
+ * ### Property Level Noun
+ *
+ * ```ts
+ * const noun = noun(MyClass, 'title');
+ * ```
+ *
+ * ### Parameter Level Noun
+ *
+ * ```ts
+ * const noun = noun(MyClass, 'setTitle', 0);
+ * ```
+ *
+ * @param target - The target class constructor to retrieve metadata from.
+ * @param property - The name of the property or method to retrieve metadata for.
+ * @param index - The index of the parameter if retrieving metadata for a method parameter.
+ * @returns The noun metadata if found; otherwise, `undefined`.
+ */
+export function noun(target: Class, property?: string, index?: number): string | undefined {
+  return MetadataDescriptor.get(target, property, index)?.noun;
 }

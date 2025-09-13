@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Class } from '@agape/types';
 import 'reflect-metadata';
 
@@ -22,7 +23,7 @@ export class MetadataDescriptor {
 
   description?: string;
 
-  example?: unknown;
+  example?: any;
 
   static for(target: Class | object, property?: string, index?: number): MetadataDescriptor {
     const prototype = typeof target === 'function' ? target.prototype : target;
