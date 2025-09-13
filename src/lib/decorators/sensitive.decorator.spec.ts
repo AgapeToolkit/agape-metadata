@@ -8,7 +8,7 @@ describe('Label', () => {
   it('should decorate a class', () => {
     @Sensitive
     class Foo {
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo)
@@ -17,7 +17,7 @@ describe('Label', () => {
   it('should set sensitive to false', () => {
     @Sensitive(false)
     class Foo {
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo)
@@ -28,7 +28,7 @@ describe('Label', () => {
 
     class Foo {
       @Sensitive
-      foo: string;
+      foo!: string;
     }
 
     const d = MetadataDescriptor.for(Foo, 'foo')
