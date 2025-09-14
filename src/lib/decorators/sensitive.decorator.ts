@@ -8,8 +8,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * > This decorator sets `<property>sensitive` to `<intrinsic>true` on the corresponding
  * {@link MetadataDescriptor}
  *
- * ## Usage
- *
+ * @example
  * ### Class
  * ```ts
  * @Sensitive
@@ -19,6 +18,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Property
  * ```ts
  * class Employee {
@@ -27,6 +27,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Method
  * ```ts
  * class AuthService {
@@ -37,6 +38,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Parameter
  * ```ts
  * class AuthService {
@@ -48,6 +50,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Explicitly disable sensitivity
  * ```ts
  * class Admin extends User {

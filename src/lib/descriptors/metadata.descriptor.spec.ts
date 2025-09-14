@@ -13,7 +13,7 @@ describe('MetadataDescriptor', () => {
   })
 
   it('should set some properties', () => {
-    d = new MetadataDescriptor();
+    d = new MetadataDescriptor('TestName');
     d.label = 'Label';
     d.labels = 'Labels';
     d.noun = 'noun';
@@ -24,6 +24,7 @@ describe('MetadataDescriptor', () => {
     d.description = 'Description';
     d.example = 'example';
 
+    expect(d.name).toEqual('TestName');
     expect(d.label).toEqual('Label');
     expect(d.labels).toEqual('Labels');
     expect(d.noun).toEqual('noun');
@@ -42,6 +43,27 @@ describe('MetadataDescriptor', () => {
 
       const e = MetadataDescriptor.for(Foo);
       expect(d).toBe(e)
+    })
+    it('should automatically set name for class', () => {
+      class Foo { }
+      d = MetadataDescriptor.for(Foo)
+      expect(d.name).toEqual('Foo')
+    })
+    it('should automatically set name for property', () => {
+      class Foo {
+        bar!: string;
+      }
+      d = MetadataDescriptor.for(Foo, 'bar')
+      expect(d.name).toEqual('bar')
+    })
+    it('should not set name for parameter', () => {
+      class Foo {
+        method(): void {
+          // Empty method for testing
+        }
+      }
+      d = MetadataDescriptor.for(Foo, 'method', 0)
+      expect(d.name).toBeUndefined()
     })
     it('should get the same descriptor for a class as it\'s prototype', () => {
       class Foo { }

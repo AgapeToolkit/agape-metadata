@@ -8,20 +8,21 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * It supports metadata attached at the class level, property level, or parameter level depending
  * on which arguments are provided.
  *
- * ## Usage
- *
+ * @example
  * ### Class Level Tokens
  *
  * ```ts
  * const metadata = tokens(MyClass);
  * ```
  *
+ * @example
  * ### Property Level Tokens
  *
  * ```ts
  * const metadata = tokens(MyClass, 'title');
  * ```
  *
+ * @example
  * ### Parameter Level Tokens
  *
  * ```ts

@@ -11,8 +11,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * > This decorator sets the `<property>label` and `<property>labels` properties
  * on the associated {@link MetadataDescriptor}.
  *
- * ## Usage
- *
+ * @example
  * ### Class
  * ```ts
  * @Label('Product', 'Products')
@@ -22,6 +21,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Property
  * ```ts
  * class Product {
@@ -30,6 +30,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Method
  * ```ts
  * class ProductService {
@@ -40,6 +41,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Parameter
  * ```ts
  * class ProductService {

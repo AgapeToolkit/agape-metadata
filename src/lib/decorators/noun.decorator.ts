@@ -10,8 +10,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * > This decorator sets the `<property>noun` and `<property>nouns` properties
  * on the associated {@link MetadataDescriptor}.
  *
- * ## Usage
- *
+ * @example
  * ### Class
  * ```ts
  * @Noun('product', 'products')
@@ -21,6 +20,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Property
  * ```ts
  * class Product {
@@ -29,6 +29,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Method
  * ```ts
  * class ProductService {
@@ -39,6 +40,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Parameter
  * ```ts
  * class ProductService {

@@ -13,8 +13,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * > This decorator sets the `<property>token` and `<property>tokens` properties
  * on the associated {@link MetadataDescriptor}.
  *
- * ## Usage
- *
+ * @example
  * ### Class
  * ```ts
  * @Token('product', 'products')
@@ -24,6 +23,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Property
  * ```ts
  * class Product {
@@ -32,6 +32,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Method
  * ```ts
  * class ProductService {
@@ -42,6 +43,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * }
  * ```
  *
+ * @example
  * ### Parameter
  * ```ts
  * class ProductService {
