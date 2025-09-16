@@ -1,6 +1,6 @@
 {
   "name": "@agape/metadata",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Metadata annotations",
   "main": "./cjs/index.js",
   "module": "./es2020/index.js",
@@ -15,7 +15,7 @@
   "homepage": "https://agape.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AgapeToolkit/meta-data"
+    "url": "https://github.com/AgapeToolkit/AgapeToolkit"
   },
   "keywords": [
     "agape",
