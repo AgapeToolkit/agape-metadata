@@ -59,6 +59,6 @@ describe('Token', () => {
     }
 
     const d = MetadataDescriptor.for(Foo)
-    expect(d.tokens).toBe('foos')
+    expect(d.tokenPlural).toBe('foos')
   })
 })

@@ -71,7 +71,7 @@ export function Token(...args: any[]) {
 
     descriptor.token = args[0];
 
-    if (args.length > 1) descriptor.tokens = args[1];
+    if (args.length > 1) descriptor.tokenPlural = args[1];
   }
 
   return Token
