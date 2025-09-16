@@ -19,7 +19,7 @@ describe('MetadataDescriptor', () => {
     d.noun = 'noun';
     d.nounPlural = 'nouns';
     d.token = 'token';
-    d.tokens = 'tokens';
+    d.tokenPlural = 'tokens';
     d.sensitive = true;
     d.description = 'Description';
     d.example = 'example';
@@ -30,7 +30,7 @@ describe('MetadataDescriptor', () => {
     expect(d.noun).toEqual('noun');
     expect(d.nounPlural).toEqual('nouns');
     expect(d.token).toEqual('token');
-    expect(d.tokens).toEqual('tokens');
+    expect(d.tokenPlural).toEqual('tokens');
     expect(d.sensitive).toEqual(true);
     expect(d.example).toEqual('example');
     expect(d.description).toEqual('Description');

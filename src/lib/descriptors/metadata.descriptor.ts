@@ -116,7 +116,7 @@ export class MetadataDescriptor {
    *
    * Used when referring to multiple instances of the decorated element.
    */
-  tokens?: string;
+  tokenPlural?: string;
 
   /**
    * Indicates whether the decorated element contains sensitive information.
