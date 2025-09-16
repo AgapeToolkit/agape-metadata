@@ -1,6 +1,6 @@
 # @agape/metadata
 
-Metadata annotations and descriptors for TypeScript classes, properties, methods, and parameters.
+Store and retrieve metadata for TypeScript classes, properties, methods, and parameters.
 
 ## ✨ Decorators
 
@@ -104,8 +104,36 @@ Retrieves the plural token for a class, property, or parameter.
 ### `nouns(target, property?, index?)`
 Retrieves the plural noun for a class, property, or parameter.
 
+---
+
+## 🏗️ MetadataDescriptor
+
 ### `MetadataDescriptor.for(target, property?, index?)`
 Creates or retrieves a metadata descriptor for a class, property, or parameter.
+
+### `MetadataDescriptor.get(target, property?, index?)`
+Retrieves an existing metadata descriptor for a class, property, or parameter.
+
+### Example
+```ts
+import { MetadataDescriptor } from '@agape/metadata';
+
+// Get descriptor for a property
+const descriptor = MetadataDescriptor.for(User, 'email');
+
+// Access all metadata properties
+console.log(descriptor.description);  // "The user's email address..."
+console.log(descriptor.label);        // "Email Address"
+console.log(descriptor.name);         // "email"
+console.log(descriptor.sensitive);    // true
+console.log(descriptor.token);        // "user.email"
+console.log(descriptor.noun);         // { singular: "email", plural: "emails" }
+console.log(descriptor.example);      // "john.doe@example.com"
+
+// Set metadata directly
+descriptor.description = "Updated description";
+descriptor.sensitive = false;
+```
 
 ---
 
