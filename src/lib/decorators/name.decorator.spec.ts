@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Name } from './name.decorator';
 import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
 
