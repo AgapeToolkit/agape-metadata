@@ -1,6 +1,6 @@
 # @agape/metadata
 
-Store and retrieve metadata for TypeScript classes, properties, methods, and parameters.
+Metadata annotations and descriptors for TypeScript classes, properties, methods, and parameters.
 
 ## ✨ Decorators
 
@@ -127,7 +127,8 @@ console.log(descriptor.label);        // "Email Address"
 console.log(descriptor.name);         // "email"
 console.log(descriptor.sensitive);    // true
 console.log(descriptor.token);        // "user.email"
-console.log(descriptor.noun);         // { singular: "email", plural: "emails" }
+console.log(descriptor.noun);         // "email"
+console.log(descriptor.nouns);        // "emails"
 console.log(descriptor.example);      // "john.doe@example.com"
 
 // Set metadata directly
@@ -141,8 +142,7 @@ descriptor.sensitive = false;
 
 See the full API documentation at [agape.dev/api](https://agape.dev/api).
 
----
 
-## 📦 Repository
+## 📦 Agape Toolkit
 
-This package is part of the [AgapeToolkit monorepo](https://github.com/AgapeToolkit/AgapeToolkit).
+This package is part of the [Agape Toolkit](https://github.com/AgapeToolkit/AgapeToolkit) - a comprehensive collection of TypeScript utilities and libraries for modern web development.
