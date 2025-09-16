@@ -55,55 +55,7 @@ class User {
   @Description('Account creation timestamp')
   createdAt!: Date;
 }
-
-// Use metadata in your application
-const content = `
-<h2>Edit ${label(User)}</h2>
-<div>${description(User)}</div>
-<form class="${tokens(User)}">
-  <label for="fullName">${label(User, 'fullName')}</label>
-  <input type="text" id="fullName" name="fullName" />
-  
-  <label for="email">${label(User, 'email')}</label>
-  <input type="email" id="email" name="email" />
-</form>
-`;
 ```
-
----
-
-## 🔧 Functions
-
-### `description(target, property?, index?)`
-Retrieves the description metadata for a class, property, or parameter.
-
-### `name(target, property?, index?)`
-Retrieves the name metadata for a class, property, or parameter.
-
-### `label(target, property?, index?)`
-Retrieves the label metadata for a class, property, or parameter.
-
-### `sensitive(target, property?, index?)`
-Checks if a class, property, or parameter is marked as sensitive.
-
-### `token(target, property?, index?)`
-Retrieves the token metadata for a class, property, or parameter.
-
-### `noun(target, property?, index?)`
-Retrieves the noun metadata for a class, property, or parameter.
-
-### `example(target, property?, index?)`
-Retrieves the example metadata for a class, property, or parameter.
-
-### `labels(target, property?, index?)`
-Retrieves the plural label for a class, property, or parameter.
-
-### `tokens(target, property?, index?)`
-Retrieves the plural token for a class, property, or parameter.
-
-### `nouns(target, property?, index?)`
-Retrieves the plural noun for a class, property, or parameter.
-
 ---
 
 ## 🏗️ MetadataDescriptor
@@ -113,28 +65,6 @@ Creates or retrieves a metadata descriptor for a class, property, or parameter.
 
 ### `MetadataDescriptor.get(target, property?, index?)`
 Retrieves an existing metadata descriptor for a class, property, or parameter.
-
-### Example
-```ts
-import { MetadataDescriptor } from '@agape/metadata';
-
-// Get descriptor for a property
-const descriptor = MetadataDescriptor.for(User, 'email');
-
-// Access all metadata properties
-console.log(descriptor.description);  // "The user's email address..."
-console.log(descriptor.label);        // "Email Address"
-console.log(descriptor.name);         // "email"
-console.log(descriptor.sensitive);    // true
-console.log(descriptor.token);        // "user.email"
-console.log(descriptor.noun);         // "email"
-console.log(descriptor.nouns);        // "emails"
-console.log(descriptor.example);      // "john.doe@example.com"
-
-// Set metadata directly
-descriptor.description = "Updated description";
-descriptor.sensitive = false;
-```
 
 ---
 

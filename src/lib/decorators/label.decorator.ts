@@ -8,7 +8,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  * Labels can be used when displaying in user interfaces such as form inputs,
  * tables, and auto-generated documentation.
  *
- * > This decorator sets the `<property>label` and `<property>labels` properties
+ * > This decorator sets the `<property>label` and `<property>labelPlural` properties
  * on the associated {@link MetadataDescriptor}.
  *
  * @example
@@ -69,7 +69,7 @@ export function Label(...args: any[]) {
 
     descriptor.label = args[0];
 
-    if (args.length > 1) descriptor.labels = args[1];
+    if (args.length > 1) descriptor.labelPlural = args[1];
   }
 
   return Label

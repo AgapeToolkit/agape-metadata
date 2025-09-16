@@ -6,7 +6,7 @@ import 'reflect-metadata';
  * A descriptor that holds metadata information for classes, properties, methods, and parameters.
  *
  * The `MetadataDescriptor` class is used to store and retrieve metadata associated with various
- * elements in your codebase. It supports storing information like names, labels, descriptions,
+ * elements in your codebase. It supports storing information like names, labelPlural, descriptions,
  * and other metadata that can be used for serialization, validation, documentation generation,
  * and other metadata-driven operations.
  *
@@ -39,7 +39,7 @@ import 'reflect-metadata';
  *
  * @example
  * ### Example
- * 
+ *
  * ```ts
  * class User {
  *   @Label('Email address')
@@ -86,7 +86,7 @@ export class MetadataDescriptor {
    * Used when displaying multiple instances of the decorated element,
    * such as in table headers or list titles.
    */
-  labels?: string;
+  labelPlural?: string;
 
   /**
    * A noun that represents the decorated element.
@@ -101,7 +101,7 @@ export class MetadataDescriptor {
    *
    * Used when referring to multiple instances of the decorated element.
    */
-  nouns?: string;
+  nounPlural?: string;
 
   /**
    * A token identifier for the decorated element.
