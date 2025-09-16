@@ -15,9 +15,9 @@ describe('MetadataDescriptor', () => {
   it('should set some properties', () => {
     d = new MetadataDescriptor('TestName');
     d.label = 'Label';
-    d.labels = 'Labels';
+    d.labelPlural = 'Labels';
     d.noun = 'noun';
-    d.nouns = 'nouns';
+    d.nounPlural = 'nouns';
     d.token = 'token';
     d.tokens = 'tokens';
     d.sensitive = true;
@@ -26,9 +26,9 @@ describe('MetadataDescriptor', () => {
 
     expect(d.name).toEqual('TestName');
     expect(d.label).toEqual('Label');
-    expect(d.labels).toEqual('Labels');
+    expect(d.labelPlural).toEqual('Labels');
     expect(d.noun).toEqual('noun');
-    expect(d.nouns).toEqual('nouns');
+    expect(d.nounPlural).toEqual('nouns');
     expect(d.token).toEqual('token');
     expect(d.tokens).toEqual('tokens');
     expect(d.sensitive).toEqual(true);

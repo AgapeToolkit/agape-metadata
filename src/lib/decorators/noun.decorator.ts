@@ -7,7 +7,7 @@ import { MetadataDescriptor } from '../descriptors/metadata.descriptor';
  *
  * Nouns can be used when referencing the object or attribute.
  *
- * > This decorator sets the `<property>noun` and `<property>nouns` properties
+ * > This decorator sets the `<property>noun` and `<property>nounPlural` properties
  * on the associated {@link MetadataDescriptor}.
  *
  * @example
@@ -68,7 +68,7 @@ export function Noun(...args: any[]) {
 
     descriptor.noun = args[0];
 
-    if (args.length > 1) descriptor.nouns = args[1];
+    if (args.length > 1) descriptor.nounPlural = args[1];
   }
 
   return Noun

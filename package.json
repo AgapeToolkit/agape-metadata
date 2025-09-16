@@ -1,6 +1,6 @@
 {
   "name": "@agape/metadata",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Metadata annotations",
   "main": "./cjs/index.js",
   "module": "./es2020/index.js",

@@ -59,6 +59,6 @@ describe('Label', () => {
     }
 
     const d = MetadataDescriptor.for(Foo)
-    expect(d.labels).toBe('Foos')
+    expect(d.labelPlural).toBe('Foos')
   })
 })
